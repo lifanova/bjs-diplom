@@ -7,7 +7,7 @@ class LogoutButton {
   }
 
   logoutClick(event) {
-    event.preventDefault();
-    this.action();
+    event.preventDefault();    
+    this.action();    
   }
 }
