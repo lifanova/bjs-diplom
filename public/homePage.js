@@ -63,16 +63,14 @@ let moneyCallback = (response) => {
 
 // Конвертация валюты
 moneyManager.conversionMoneyCallback = (moneyData) => {
-    // moneyData -> { fromCurrency, targetCurrency, fromAmount }
-    console.log("[conversionMoneyCallback]");
+    // moneyData -> { fromCurrency, targetCurrency, fromAmount }    
     ApiConnector.convertMoney(moneyData, processConversion);
 };
 
 let processConversion = (response) => {
     let msg = (response.success) ? "Операция конвертации выполнена" : response.error;
     moneyManager.setMessage(response.success, msg);
-    console.log("[conversionMoneyCallback]" + msg);
-
+    
     ProfileWidget.showProfile(response.data);        
 };
 

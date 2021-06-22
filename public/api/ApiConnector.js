@@ -243,7 +243,7 @@ class ApiConnector {
    * @memberof ApiConnector
    */
   static addMoney({ currency, amount }, callback) {
-    console.log("[addMoney] " + currency + ", " + amount);
+    
     const asyncPart = async () => {
       const body = JSON.stringify({ currency, amount });
       
